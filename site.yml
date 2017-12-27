@@ -1,7 +1,7 @@
 ---
 - hosts: all
  # user: ubuntu
- #  become: True
+ # become: True
   user: root
   roles:
     - preconf
@@ -26,7 +26,9 @@
     - poa-pm2
     - poa-netstats
     - nginx
+ # just remove next line for ScaleWay   and create security group manualy
     - bootnode-access
+ # Ok that's enough even for ScaleWay )))   
   tags:
     - bootnode
 
@@ -44,7 +46,9 @@
     - poa-pm2
     - poa-netstats
     - validator
+    # just remove next line for ScaleWay   and create security group manualy
     - validator-access
+     # Ok that's enough even for ScaleWay )))  
   tags:
     - validator
 
@@ -62,7 +66,9 @@
     - poa-logrotate
     - netstat
     - nginx
+     # just remove next line for ScaleWay   and create security group manualy
     - netstat-access
+     # Ok that's enough even for ScaleWay )))  
   tags:
     - netstat
 
@@ -82,7 +88,9 @@
     - poa-pm2
     - explorer
     - nginx
+     # just remove next line for ScaleWay   and create security group manualy
     - explorer-access
+     # Ok that's enough even for ScaleWay ))) 
   tags:
     - explorer
 
@@ -100,6 +108,8 @@
     - poa-pm2
     - poa-netstats
     - moc
+     # just remove next line for ScaleWay   and create security group manualy
     - moc-access
+     # Ok that's enough even for ScaleWay ))) 
   tags:
     - moc
