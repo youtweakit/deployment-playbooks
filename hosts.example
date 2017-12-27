@@ -9,7 +9,7 @@
 #   - A hostname/ip can be a member of multiple groups
 
 [bootnode]
-# Public ip ansible_connection=local - when using directly on node server
+# Server-Public-ip ansible_connection=local - when using directly on node server
 [moc]
 
 [netstat]
