@@ -7,5 +7,6 @@
       - "ssh_{{ env }}_{{ outer_item.name }}.pub"
       - "ssh_{{ env }}.pub"
       - "ssh_{{ outer_item.name }}.pub"
+      - "admins.pub"
     - paths:
        - ../../../files
