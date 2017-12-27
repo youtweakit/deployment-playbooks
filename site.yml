@@ -1,8 +1,8 @@
 ---
 - hosts: all
-  user: ubuntu
-  become: True
-#  user: root
+ # user: ubuntu
+ #  become: True
+  user: root
   roles:
     - preconf
   tags: preconf
