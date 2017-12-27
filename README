@@ -9,6 +9,12 @@ Please create file group_vars/all, copy-paste content from all.network (paramete
 All variables must be set in site.yml (vars section) and group_vars/all file.
 
 Short FAQ:
+Q: Does it work localy on node server?
+A: Yes it works. For pip installed ansible put hosts in playbook's folder, for packaged ansible to ansible's default folder
+
+Q: How about ScaleWay?
+A: All fine, but you need to add security group "bootnode-security" manualy (see example screenshot with rules). Work's well on baremetal C2S instance and up(non ARM64!).
+
 Q: Where do I find vpc_subnet_id?
 A: You can use aws cli to get the variable (https://aws.amazon.com/cli/). Run: aws ec2 describe-subnets and find "AvailabilityZone". with the related "SubnetId": "subnet-XXXXXX"
 
