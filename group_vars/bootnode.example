@@ -1,11 +1,40 @@
-access_key: "INSERT KEY HERE"
-secret_key: "INSERT SECRET HERE"
-awskeypair_name: "keypairname"
+---
+ssh_root:
+    - "{{ lookup('file', 'files/admins.pub') }}"
 
-vpc_subnet_id: "subnet-ID-number"
+snmp_syslocation: "USA"
+snmp_ipsubnet:    "172.16.0.0/16"
 
-NODE_FULLNAME: "INSERT NODENAME"
-NODE_ADMIN_EMAIL: "INSERT@EMAIL"
+nameservers:
+  - "8.8.8.8"
+  - "8.8.4.4"
 
-NETSTATS_SERVER: "INSERT FULL URL"
-NETSTATS_SECRET: "INSERT SECRET"
+ntpservers:
+  - "server 0.us.pool.ntp.org"
+  - "server 1.us.pool.ntp.org"
+  - "server 2.us.pool.ntp.org"
+  - "server 3.us.pool.ntp.org"
+
+
+region: "par1"
+
+NODE_PWD: "node.pwd" # don't change this one
+NODE_SOURCE_DEB: "https://deb.nodesource.com/node_8.x"
+PARITY_BIN_LOC: "https://github.com/poanetwork/binary-releases/releases/download/1.8.4/parity"
+
+SCRIPTS_MOC_BRANCH: "core"
+SCRIPTS_VALIDATOR_BRANCH: "core"
+MAIN_REPO_FETCH: "poanetwork"
+TEMPLATES_BRANCH: "core"
+GENESIS_BRANCH: "core"
+GENESIS_NETWORK_NAME: "Core"
+
+MOC_ADDRESS: "0xcf260ea317555637c55f70e55dba8d5ad8414cb0"
+BLK_GAS_LIMIT: "8000000"
+
+#bootnode
+NODE_FULLNAME: "Full name of node here"
+NODE_ADMIN_EMAIL: "your@email.yy"
+
+NETSTATS_SERVER: "https://core-netstat.poa.network"
+NETSTATS_SECRET: "xxxx"
